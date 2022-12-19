@@ -2,6 +2,7 @@ import RestaurantSource from '../../data/restaurantApi-source';
 import UrlParser from '../../routes/url-parser';
 import { createDetailItemTemplate } from '../templates/resto-detail';
 import FavoriteButton from '../../utils/favorite-button-presenter';
+import FavoriteRestoIdb from '../../data/favorite-resto-idb';
 
 const Detail = {
   async render() {
@@ -22,6 +23,7 @@ const Detail = {
 
     FavoriteButton.init({
       favoriteButtonContainer: document.querySelector('#favoriteButtonContainer'),
+      favoriteRestos: FavoriteRestoIdb,
       restos: {
         id: resto.id,
         city: resto.city,

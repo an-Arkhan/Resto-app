@@ -175,6 +175,17 @@ main h1 {
   font-size: large;
   font-weight: bolder;
 }
+main .content {
+  text-align: center;
+}
+main .content input {
+  margin-top: 10px;
+}
+main .content h2 {
+  color: #1b2737;
+  font-size: large;
+  font-weight: bolder;
+}
 main #resto {
   padding: 10px;
 }
@@ -198,6 +209,38 @@ main #resto article img {
 main #resto article h1 {
   font-size: small;
   color: #1b2737;
+}
+main #restos {
+  padding: 10px;
+}
+main #restos .resto-item {
+  margin: auto;
+  background-color: #FFCACA;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+main #restos .resto-item .description {
+  font-size: 9px;
+  padding: 10px;
+  text-align: justify;
+}
+main #restos .resto-item img {
+  width: 100%;
+  object-fit: cover;
+}
+main #restos .resto-item h1 {
+  font-size: small;
+  color: #1b2737;
+}
+main #restos .resto-item__not__found {
+  margin: auto;
+  background-color: #FFCACA;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
 }
 main #resto-detail {
   padding: 10px;
@@ -282,6 +325,12 @@ main #bahan article h1 {
     margin: 10px 0px;
   }
   main #resto article h1 {
+    font-size: large;
+  }
+  main #restos article {
+    margin: 10px 0px;
+  }
+  main #restos article h1 {
     font-size: large;
   }
   main #bahan article {

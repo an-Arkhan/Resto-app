@@ -1,8 +1,10 @@
-import FavoriteButton from '../../src/scripts/utils/favorite-button-presenter';
+import FavoriteRestoIdb from '../../src/scripts/data/favorite-resto-idb';
+import FavoriteButtonPresenter from '../../src/scripts/utils/favorite-button-presenter';
 
 const createFavoriteButtonPresenterWithResto = async (restos) => {
-  await FavoriteButton.init({
+  await FavoriteButtonPresenter.init({
     favoriteButtonContainer: document.querySelector('#favoriteButtonContainer'),
+    favoriteRestos: FavoriteRestoIdb,
     restos,
   });
 };

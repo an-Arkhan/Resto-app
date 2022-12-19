@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 const createDetailItemTemplate = (resto) => `
     <article>
         <img src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}">
-        <h1>${resto.name}</h1>
+        <h1 class="resto__name">${resto.name}</h1>
         <div class="description">
             <p>Kota : ${resto.city}</p>
             <p>Alamat : ${resto.address}</p>

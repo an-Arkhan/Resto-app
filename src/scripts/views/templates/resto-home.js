@@ -1,15 +1,15 @@
 import CONFIG from '../../globals/config';
 
 const createRestoItemTemplate = (restos) => `
-    <article>
-        <a href="#/detail/${restos.id}">
+    <article class="resto-item">
+        <a href="#/detail/${restos.id}" class="resto-pict">
             <img src="${CONFIG.BASE_IMAGE_URL + restos.pictureId}" alt="${restos.name}">
         </a>
-        <h1>${restos.name}</h1>
+        <h1 class="resto__name">${restos.name || '-'}</h1>
         <div class="description">
-            <p>Kota : ${restos.city}</p>
-            <p>Rating : ${restos.rating}</p>
-            <p>Desc : ${restos.description}</p>
+            <p>Kota : ${restos.city || '-'}</p>
+            <p>Rating : ${restos.rating || '-'}</p>
+            <p>Desc : ${restos.description || '-'}</p>
         </div>
     </article>
 `;
