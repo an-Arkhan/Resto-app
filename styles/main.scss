@@ -1,0 +1,430 @@
+//npm run sass-watch untuk mengcompile sass ke css
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$primary-color: #1b2737;
+$second-color: #364361;
+$third-color: #FFCACA;
+
+$fontfams: 'Noto Sans', sans-serif;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fontfams;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+header {
+    nav {
+        display: flex;
+        background-color: $primary-color;
+        padding: 12px;
+        width: 100%;
+        position: fixed;
+        align-items: baseline;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        #logo {
+            padding: 14px 0;
+            width: 50%;
+            margin-left: 1.6em;
+            font-weight: bold;
+            font-size: large;
+            color: white;
+            text-decoration: none;
+        }
+
+        .bar-btn {
+            display: flex;
+            align-items: flex-end;
+            #bar-menu {
+                background-color: transparent;
+                border: none;
+                padding: 10px 0;
+                padding-left: 45px;
+                cursor: pointer;
+                font-weight: bold;
+                font-size: large;
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        .nav {
+            margin-right: 1.6em;
+            width: 50%;
+
+            ul {
+                justify-content: end;
+                display: flex;
+                list-style-type: none;
+
+                li {
+                    margin-right: 15px;
+
+                    a {
+                        padding: 13px 4px;
+                        color: white;
+                        font-weight: bold;
+                        text-decoration: none;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 614px) {
+    .nav {
+        z-index: 10;
+        background-color: $second-color;
+        width: 300px;
+        position: absolute;
+
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(850px, 0);
+        transform: translate(850px, 0);
+
+    }
+
+    .open {
+        -webkit-transform: translate(7em, 4em);
+        transform: translate(7em, 4em);
+    }
+
+    header {
+        nav {
+            .nav {
+                ul {
+                    padding: 0;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .list-item {
+        display: list-item;
+        padding-left: 15px;
+        padding-top: 10px;
+        color: $primary-color;
+        border-bottom: 1px solid $primary-color;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:400px) {
+    header {
+        nav {
+            #logo {
+                font-size: medium;
+            }
+        }
+    }
+
+    .open {
+        -webkit-transform: translate(4em, 3.87em);
+        transform: translate(4em, 3.87em);
+    }
+}
+
+@media screen and (max-width:360px) {
+    .open {
+        -webkit-transform: translate(4em, 5.25em);
+        transform: translate(4em, 5.25em);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .list-menu {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+.header-menu {
+    margin-right: 1.6em;
+    display: flex;
+    justify-content: end;
+    width: 50%;
+}
+
+@media screen and (min-width: 615px) {
+    .header-menu {
+        display: none;
+        margin-right: 1.6em;
+        justify-content: end;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .list-menu {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+.jumbotron {
+    background-position: center;
+    background-image: url("../public/images/heros/hero-image_2.jpg");
+    text-align: center;
+    height: 500px;
+
+    img {
+        object-fit: cover;
+        object-position: center;
+        margin-top: 120px;
+    }
+
+    h1 {
+        color: #fff;
+        text-shadow: 4px 4px 8px $primary-color;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .jumbotron {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+main {
+    h1 {
+        text-align: center;
+        color: $primary-color;
+        font-size: large;
+        font-weight: bolder;
+    }
+
+    #resto {
+        padding: 10px;
+
+        article {
+            margin: auto;
+            background-color: $third-color;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+
+            .description {
+                font-size: 9px;
+                padding: 10px;
+                text-align: justify;
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            h1 {
+                font-size: small;
+                color: $primary-color;
+            }
+        }
+    }
+
+    #resto-detail {
+        padding: 10px;
+
+        article {
+            margin: auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 75%;
+            border-radius: 5px;
+            overflow: hidden;
+
+            .description {
+                padding: 15px;
+                text-align: justify;
+
+                .review-item {
+                    background-color: $primary-color;
+                    border-radius: 8px;
+                    color: #fff;
+                    padding: 10px;
+                    margin-bottom: 8px;
+
+                    .review-header {
+                        .review-name {
+                            color: $third-color;
+                            margin: 0;
+                            font-weight: bold;
+                        }
+
+                        .review-date {
+                            margin: 0;
+                            font-size: 12px;
+                            font-weight: lighter;
+                        }
+
+                        .review-comment {
+                            font-size: medium;
+                        }
+                    }
+                }
+            }
+
+            img {
+
+                width: 100%;
+                object-fit: cover;
+            }
+
+            h1 {
+                font-size: x-large;
+                color: $primary-color;
+            }
+        }
+    }
+
+    #bahan {
+        padding: 10px;
+
+        article {
+            margin: auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+
+            .description {
+                font-size: 9px;
+                padding: 10px;
+                text-align: justify;
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            h1 {
+                font-size: small;
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    margin: auto;
+}
+
+@media screen and (max-width:640px) {
+    .wrapper {
+        display: block;
+    }
+
+    main {
+        #resto {
+            article {
+                margin: 10px 0px;
+
+                h1 {
+                    font-size: large;
+                }
+            }
+        }
+
+        #bahan {
+            article {
+                margin: 10px 0px;
+
+                h1 {
+                    font-size: large;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: $second-color;
+    text-align: center;
+
+    h2 {
+        color: white;
+        font-size: 10px;
+    }
+}
+
+.favorite {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #db0000;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: $second-color;
+    border: 1px solid $third-color;
+    border-radius: 4px;
+    margin-top: 4px;
+
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+
+    cursor: pointer;
+    transition: .15s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #1b314e;
+}
+
+.btn:active {
+    background-color: #1b314e;
+}
+
+.btn:focus-visible {
+    outline: 3px solid #1b314e;
+}

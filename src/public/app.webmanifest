@@ -1,0 +1,30 @@
+{
+    "id": "resto-catalogue-lite-pwa-1",
+    "start_url": "./index.html",
+    "name": "Resto Catalogue Lite",
+    "short_name": "Resto Lite",
+    "description": "Free Catalogue Restaurants for you",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#251B37",
+    "icons": [
+      {
+        "src": "/icons/app-icon-64.png",
+        "sizes": "64x64",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/icons/app-icon-144.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/icons/app-icon-256.png",
+        "sizes": "256x256",
+        "type": "image/png",
+        "purpose": "any"
+      }
+    ]
+  }
