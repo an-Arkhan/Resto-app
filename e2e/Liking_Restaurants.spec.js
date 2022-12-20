@@ -37,6 +37,8 @@ Scenario('liking one resto', async ({ I }) => {
 });
 
 Scenario('unliking one restaurant', async ({ I }) => {
+  I.see('Tidak ada restaurant untuk ditampilkan', '.resto-item__not__found');
+
   I.amOnPage('/');
   I.wait(3);
 
@@ -76,6 +78,8 @@ Scenario('unliking one restaurant', async ({ I }) => {
 });
 
 Scenario('searching restaurants', async ({ I }) => {
+  I.see('Tidak ada restaurant untuk ditampilkan', '.resto-item__not__found');
+
   I.amOnPage('/');
   I.wait(4);
 
