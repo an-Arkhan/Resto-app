@@ -35,7 +35,11 @@
 
     <!-- jumbotron -->
     <div class="jumbotron">
-      <img src="./icons/app-icon-144.png" alt="logo">
+      <picture>
+        <source type="image/webp" media="(max-width: 600px)" srcset="./icons/app-icon-64.webp">
+        <source type="image/jpeg" media="(max-width: 600px)" srcset="./icons/app-icon-64.jpg">
+        <img src="./icons/app-icon-144.png" alt="logo">
+      </picture>
       <h1>Restaurant Apps</h1>
     </div>
   </header>
