@@ -2,7 +2,7 @@ import CONFIG from '../../globals/config';
 
 const createDetailItemTemplate = (resto) => `
     <article>
-        <img src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}">
+        <img class="lazyload" src="${CONFIG.BASE_IMAGE_URL + resto.pictureId}" alt="${resto.name}">
         <h1 class="resto__name">${resto.name}</h1>
         <div class="description">
             <p>Kota : ${resto.city}</p>
