@@ -309,6 +309,34 @@ main #bahan article h1 {
   color: #1b2737;
 }
 
+.search-container {
+  text-align: center;
+}
+
+input[type=text] {
+  padding: 14px 12px;
+  margin-top: 8px;
+  font-size: 14px;
+  border: 1px solid #1b2737;
+  border-radius: 16px;
+}
+
+.search-container button {
+  padding: 18px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  background: #1b2737;
+  color: #fff;
+  border-radius: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+.search-container button:hover {
+  background: #fff;
+  color: #364361;
+}
+
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

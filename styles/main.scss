@@ -57,6 +57,7 @@ header {
         .bar-btn {
             display: flex;
             align-items: flex-end;
+
             #bar-menu {
                 background-color: transparent;
                 border: none;
@@ -223,10 +224,11 @@ main {
 
     .content {
         text-align: center;
-        
+
         input {
             margin-top: 10px;
         }
+
         h2 {
             color: $primary-color;
             font-size: large;
@@ -382,6 +384,38 @@ main {
                 color: $primary-color;
             }
         }
+    }
+}
+
+.search-container {
+    text-align: center;
+}
+
+input[type=text] {
+    padding: 14px 12px;
+    margin-top: 8px;
+    font-size: 14px;
+    border: 1px solid $primary-color;
+    border-radius: 16px;
+}
+
+.search-container {
+    button {
+        padding: 18px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        background: $primary-color;
+        color: #fff;
+        border-radius: 16px;
+        transition: 0.3s ease-in-out;
+    }
+}
+
+.search-container {
+    button:hover {
+        background: #fff;
+        color: $second-color;
     }
 }
 

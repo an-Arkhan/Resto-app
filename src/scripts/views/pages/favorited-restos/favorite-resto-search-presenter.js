@@ -13,7 +13,9 @@ class FavoriteRestoSearchPresenter {
 
   async _searchRestos(latestQuery) {
     this._latestQuery = latestQuery.trim();
+
     let foundRestos;
+
     if (this.latestQuery.length > 0) {
       foundRestos = await this._favoriteRestos.searchRestos(this.latestQuery);
     } else {

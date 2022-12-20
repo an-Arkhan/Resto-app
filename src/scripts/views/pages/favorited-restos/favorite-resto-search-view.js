@@ -5,7 +5,12 @@ class FavoriteRestoSearchView {
   getTemplate() {
     return `
       <div class="content">
-        <input id="query" type="text">
+        <div class="search-container">
+          <input id="query" type="text" placeholder="Cari Restaurant ..." >
+          <button type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
         <h2 class="content__heading">Your Favorited Restaurants</h2>
         <div id="restos" class="restos wrapper"></div>
       </div>

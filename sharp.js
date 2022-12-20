@@ -15,7 +15,7 @@ fs.readdirSync(target).forEach((image) => {
     .toFile(
       path.resolve(
         __dirname,
-        `${destination}/${image.split('.').slice(0, -1).join('.')}-256.png`,
+        `${destination}/${image.split('.').slice(0, -1).join('.')}-desktop.jpg`,
       ),
     );
 
@@ -24,25 +24,16 @@ fs.readdirSync(target).forEach((image) => {
     .toFile(
       path.resolve(
         __dirname,
-        `${destination}/${image.split('.').slice(0, -1).join('.')}-144.png`,
+        `${destination}/${image.split('.').slice(0, -1).join('.')}-large.jpg`,
       ),
     );
 
   sharp(`${target}/${image}`)
-    .resize(480)
+    .resize(400)
     .toFile(
       path.resolve(
         __dirname,
-        `${destination}/${image.split('.').slice(0, -1).join('.')}-64.png`,
-      ),
-    );
-
-  sharp(`${target}/${image}`)
-    .resize(480)
-    .toFile(
-      path.resolve(
-        __dirname,
-        `${destination}/${image.split('.').slice(0, -1).join('.')}_2.jpg`,
+        `${destination}/${image.split('.').slice(0, -1).join('.')}-small.png`,
       ),
     );
 });
