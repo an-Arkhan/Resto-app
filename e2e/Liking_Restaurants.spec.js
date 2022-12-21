@@ -18,7 +18,7 @@ Scenario('liking one resto', async ({ I }) => {
   I.see('Tidak ada restaurant untuk ditampilkan', '.resto-item__not__found');
 
   I.amOnPage('/');
-  I.wait(4);
+  I.waitForElement('.resto-item a', 6);
   I.seeElement('.resto-item a');
   const firstResto = locate('.resto-item a').first();
   const firstRestoTitle = await I.grabTextFrom(firstResto);
@@ -40,7 +40,7 @@ Scenario('unliking one restaurant', async ({ I }) => {
   I.see('Tidak ada restaurant untuk ditampilkan', '.resto-item__not__found');
 
   I.amOnPage('/');
-  I.wait(3);
+  I.waitForElement('.resto-item a', 6);
 
   I.seeElement('.resto-item a');
 
@@ -81,7 +81,7 @@ Scenario('searching restaurants', async ({ I }) => {
   I.see('Tidak ada restaurant untuk ditampilkan', '.resto-item__not__found');
 
   I.amOnPage('/');
-  I.wait(4);
+  I.waitForElement('.resto-item a', 5);
 
   I.seeElement('.resto__name');
 
