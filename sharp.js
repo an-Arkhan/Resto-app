@@ -29,11 +29,11 @@ fs.readdirSync(target).forEach((image) => {
     );
 
   sharp(`${target}/${image}`)
-    .resize(400)
+    .resize(580)
     .toFile(
       path.resolve(
         __dirname,
-        `${destination}/${image.split('.').slice(0, -1).join('.')}-small.png`,
+        `${destination}/${image.split('.').slice(0, -1).join('.')}-small.jpg`,
       ),
     );
 });

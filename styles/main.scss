@@ -189,7 +189,7 @@ header {
 
 .jumbotron {
     background-position: center;
-    background-image: url("../public/images/hero-image_2.jpg");
+    background-image: url("../public/images/hero-image_2-desktop.jpg");
     text-align: center;
     height: 500px;
 
@@ -211,6 +211,22 @@ header {
             max-width: 100%;
             height: auto;
         }
+    }
+}
+
+@media screen and (max-width:800px) {
+    .jumbotron {
+        background-image: url("../public/images/hero-image_2-large.jpg");
+        background-size: cover;
+        height: 380px;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .jumbotron {
+        background-image: url("../public/images/hero-image_2-large.jpg");
+        background-size: cover;
+        height: 330px;
     }
 }
 
